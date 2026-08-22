@@ -1,0 +1,21 @@
+/* KrishiSetu AI — Responsive Breakpoint Overrides */
+
+/* Ensure modals are full-height on small phones */
+@media (max-width: 400px) {
+  #modal-container { padding: 1.25rem; border-radius: var(--radius-xl); }
+  .service-tile { padding: 0.875rem 0.5rem; }
+  .service-tile .tile-icon { width: 2.5rem; height: 2.5rem; font-size: 1.2rem; }
+  .service-tile .tile-label { font-size: 0.72rem; }
+}
+
+/* Tablet: side navigation possible, wider cards */
+@media (min-width: 768px) {
+  body { padding-bottom: 1.5rem; }
+  #bottom-nav { display: none; }
+  .bubble-user, .bubble-ai { max-width: 70%; }
+}
+
+/* Wide desktop */
+@media (min-width: 1200px) {
+  #app-content { padding: 2.25rem 0; }
+}
