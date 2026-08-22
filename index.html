@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KrishiSetu AI — One Digital Bridge for Every Farmer. Tractors, buyers, workers, disease scanner, market prices & Krishi AI chatbot near your location in Karnataka.">
+  <meta name="theme-color" content="#0d2b1c">
+  <title>KrishiSetu AI — One Digital Bridge for Every Farmer 🌾</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome & Leaflet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .hidden { display: none !important; }
+    #modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    #modal-container { position: relative; }
+    #toast-container {
+      position: fixed; top: 1rem; right: 1rem; z-index: 2000;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      pointer-events: none; max-width: 22rem; width: calc(100% - 2rem);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ══ NAV ══ -->
+  <header id="top-header"   aria-label="KrishiSetu Navigation"></header>
+  <div    id="location-bar" aria-label="Farm Location"></div>
+
+  <!-- ══ MAIN ══ -->
+  <main id="app-content" role="main" aria-live="polite"></main>
+
+  <!-- ══ BOTTOM NAV ══ -->
+  <nav id="bottom-nav" role="navigation" aria-label="Primary Navigation"></nav>
+
+  <!-- ══ MODAL & TOASTS ══ -->
+  <div id="modal-overlay" role="dialog" aria-modal="true">
+    <div id="modal-container"></div>
+  </div>
+  <div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- ══ CORE SCRIPTS ══ -->
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/notifications.js"></script>
+
+  <!-- ══ COMPONENT SCRIPTS ══ -->
+  <script src="js/components/login.js"></script>
+  <script src="js/components/nav.js"></script>
+  <script src="js/components/farmerHome.js"></script>
+  <script src="js/components/roleDash.js"></script>
+  <script src="js/components/sellSmart.js"></script>
+  <script src="js/components/krishiAI.js"></script>
+  <script src="js/components/diseaseScan.js"></script>
+  <script src="js/components/tractors.js"></script>
+  <script src="js/components/workers.js"></script>
+  <script src="js/components/buyers.js"></script>
+  <script src="js/components/directory.js"></script>
+  <script src="js/components/irrigation.js"></script>
+  <script src="js/components/profitCalc.js"></script>
+  <script src="js/components/map.js"></script>
+  <script src="js/components/providerReg.js"></script>
+  <script src="js/components/extraPages.js"></script>
+  <script src="js/components/profile.js"></script>
+  <script src="js/components/admin.js"></script>
+
+  <!-- ══ ROUTER + BOOTSTRAP ══ -->
+  <script src="js/router.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
